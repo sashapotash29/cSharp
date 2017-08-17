@@ -99,3 +99,27 @@ int numberInt = Convert.ToInt32(number);
 ```
 
 - There is a namespace in C# that allows for the use to convert various data types into numbers. In this case, we are turning a string into a number.
+
+
+##### Catch
+
+- Catch is designed to provide a procedure or mechanism to deal with your programming throwing an exception as it runs. 
+- For example, lets say there is a part in your program that converts a user input into a different data type. Now for whatever reason, the user provides a data type that can not be converted. Rather then providing the error that the compiler will display, you can provide an error that may be more meaningful.
+
+```
+try{
+string userInput = "6000";
+
+byte userInputByte = Convert.ToByte(userInput);
+
+}
+
+catch (Exception) {
+	
+	Console.WriteLine("The input you provided can not be converted into a byte!");
+}
+
+```
+
+- NOTE The "try" block is attempted by the compiler but does not explicitly exaplain what the issue is. Therefore, if you have a lot of commands/steps in your "try" block, it will be more difficult to decipher what the issue is unless you can clearly explain the issue in the "catch" block.
+
