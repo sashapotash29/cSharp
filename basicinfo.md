@@ -60,3 +60,42 @@ for (int i =1; i<=10; i++){
 	- First is the variable that will be incrementing and/or decrementing.
 	- Second is the range of the loop. i.e. what condition will need to be met to know the looping stops.
 	- Third is the step of the for loop. In this case, it is incrementing by 1.
+
+
+##### Converting Data Types
+
+###### Type Casting
+
+```
+byte i = 1;
+int x = i;
+
+```
+- The following allows for "i" to become an integer because there is no data lost, meaning the amount space required for a byte is far less than a integer and therfore is possible to be converted.
+
+```
+// SNIPPET ONE
+int i = 1;
+byte x = i;
+
+// SNIPPET TWO
+
+int i = 1;
+byte x = (byte)i;
+``` 
+- Snippet One above will throw an error due to the byte structure/object not having the correct amout of space. 
+- Therfore, in Snippet Two, we can explcitly state that we want the conversion to happen as we are stating to the compiler that it is okay for any data loss that may occur. 
+
+###### Using Convert Library
+
+- A common example will be converting a string represntation of a number and converting it into a integer datatype.
+
+```
+string number = "1";
+
+int numberInt = Convert.ToInt32(number);
+
+
+```
+
+- There is a namespace in C# that allows for the use to convert various data types into numbers. In this case, we are turning a string into a number.
